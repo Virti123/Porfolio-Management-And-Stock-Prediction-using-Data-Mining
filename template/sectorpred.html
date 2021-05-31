@@ -1,0 +1,168 @@
+{% block header %}
+<head>
+<meta charset='utf-8'>
+
+<title>Trader's View</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+</head>
+
+{% block body %}
+<body>
+<div class="text-center">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <ul class="nav navbar-nav">
+      {% if session.logged_in %}
+      <li><a href="/logout/">Logout</a></li>
+	  {% else %}
+	  <li ><a href="/register/">Sign In</a></li>
+      <li><a href="/login/">Login</a></li>
+	  {% endif %}
+  </div>
+  </nav>
+<h1>Trader's View</h1>
+<form method=post action="/">
+<div class="btn-group">
+<input type="submit" class="btn btn-info" value="Home" name="submit">
+<input type="submit" class="btn btn-info" value="News" name="submit">
+<input type="submit" class="btn btn-info" value="My Portfolio" name="submit">
+<input type="submit" class="btn btn-info" value="Commodities" name="submit">
+<input type="submit" class="btn btn-info" value="Prediction" name="submit">
+<input type="submit" class="btn btn-info" value="Recommendation" name="submit">
+<input type="submit" class="btn btn-info" value="About Us" name="submit">
+<input type="submit" class="btn btn-info" value="FAQ's" name="submit">
+<input type="submit" class="btn btn-info" value="Contact Us" name="submit">
+
+</div>
+</form>
+
+
+<div class="container">
+<div class="text-center">
+
+  <h3> Prediction</h3>
+ <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th><center>Stockname</center></th>
+		<th><center>Increase/Decrease</center></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+      {% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			{% if loop.index is not equalto 1%}
+			{% if loop.index is not equalto 2%}
+			{% if loop.index is not equalto 3%}
+			{% if loop.index is not equalto 4%}
+			{% if loop.index is not equalto 5%}
+			{% if loop.index is not equalto 6%}
+			{% if loop.index is not equalto 7%}
+			{% if loop.index is not equalto 8%}
+			{% if loop.index is not equalto 9%}
+			{% if loop.index is not equalto 10%}
+			{% if loop.index is not equalto 12%}
+			{% if loop.index is not equalto 14%}
+			{% if loop.index is not equalto 16%}
+			{% if loop.index is not equalto 18%}
+			{% if loop.index is divisibleby 2%}
+			
+      <td height="45"><p align="center">
+       {{message}}
+	   </p>
+     </td>
+
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+
+			{% if loop.index is not equalto 1%}
+			{% if loop.index is not equalto 2%}
+			{% if loop.index is not equalto 3%}
+			{% if loop.index is not equalto 4%}
+			{% if loop.index is not equalto 5%}
+			{% if loop.index is not equalto 6%}
+			{% if loop.index is not equalto 7%}
+			{% if loop.index is not equalto 8%}
+			{% if loop.index is not equalto 9%}
+			{% if loop.index is not equalto 11%}
+			{% if loop.index is not equalto 13%}
+			{% if loop.index is not equalto 15%}
+			{% if loop.index is not equalto 17%}
+			{% if loop.index is not equalto 19%}
+			
+			{% if loop.index is not divisibleby 2%}
+			
+      <td height="45"><p align="center">
+       {{message}}
+	   </p>
+     </td>
+	<tr></tr>
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	  {% endif %}
+	  {% endif %}
+	  {% endif %}
+	  {% endif %}
+	  {% endif %}
+	  {% endif %}
+	 	 {% endif %}
+
+	 
+     
+      
+
+
+
+			
+      
+
+			{% endfor %}
+			{% endif %}
+		
+			{% endwith %}
+		
+       
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+</div>
+<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+
+
+{% endblock %}
+{% endblock %}

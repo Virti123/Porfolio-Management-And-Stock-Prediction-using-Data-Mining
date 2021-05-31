@@ -1,0 +1,311 @@
+{% block head %}
+<head>
+<meta charset='utf-8'>
+<meta http-equiv = "refresh" content="15" name='description' content='Trader's View'>
+
+<title>Trader's View</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<style>
+
+.button {
+    background-color:#008CBA; /* Green */
+    border: none;
+    color: white;
+	border-radius: 12px;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button5 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.button5:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+</style>
+</head>
+{% block body %}
+
+<body>
+<div class="text-center">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <ul class="nav navbar-nav">
+      {% if session.logged_in %}
+      <li text-align=" right"><a href="/logout/">Logout</a></li>
+	  {% else %}
+	  <li ><a href="/register/">Sign Up</a></li>
+      <li><a href="/login/">Login</a></li>
+	  {% endif %}
+  </div>
+  </nav>
+<h1>Trader's View</h1>
+<form method=post action="/">
+<div class="btn-group">
+<input type="submit" class="btn btn-info" value="Home" name="submit">
+<input type="submit" class="btn btn-info" value="News" name="submit">
+<input type="submit" class="btn btn-info" value="My Portfolio" name="submit">
+<input type="submit" class="btn btn-info" value="Commodities" name="submit">
+<input type="submit" class="btn btn-info" value="Prediction" name="submit">
+<input type="submit" class="btn btn-info" value="Recommendation" name="submit">
+<input type="submit" class="btn btn-info" value="About Us" name="submit">
+<input type="submit" class="btn btn-info" value="FAQ's" name="submit">
+<input type="submit" class="btn btn-info" value="Contact Us" name="submit">
+
+</div>
+</form>
+<table class="table table-striped">
+<thead>
+        <tr>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			{% if loop.index is equalto 1 %} 
+            <th><center>Sensex<br>{{message}}</center></th>
+			{% endif %}
+			
+			{% if loop.index is equalto 2 %} 
+            <th><center>Nifty<br>{{message}}</center></th>
+			{% endif %}
+			{% if loop.index is equalto 3 %} 
+            <th><center>Euro<br>{{message}}</center></th>
+			{% endif %}
+			{% if loop.index is equalto 4 %} 
+			<th><center>Oil<br>{{message}}</center></th>
+			{% endif %}
+			{% if loop.index is equalto 5%} 
+            <th><center>Dollar-Rupee<br>{{message}}</center></th>
+			{% endif %}
+			{% endfor %}
+			{% endif %}
+		
+			{% endwith %}
+        </tr>
+    </thead>
+</table>
+<br>
+
+
+<div class="row">
+    <div class="col-lg-3">
+      <div class="container">
+    <div class="row col-md-3">
+        <table class="table table-striped" id="someid">
+            <tr>
+                <td class="text-primary"><strong>MOST ACTIVE STOCKS</strong></td>
+            </tr>
+			{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			{% if loop.index is equalto 6 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				{% if loop.index is equalto 7 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				{% if loop.index is equalto 8 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				{% if loop.index is equalto 9 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				{% if loop.index is equalto 10 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				
+			{% endfor %}
+			{% endif %}
+		
+			{% endwith %}
+        </table>
+		<br>
+		<table class="table table-striped" id="someid">
+            <tr>
+                <td class="text-success"><strong>TOP GAINERS</strong></td>
+            </tr>
+			{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			{% if loop.index is equalto 11 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				{% if loop.index is equalto 12 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				{% if loop.index is equalto 13 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				{% if loop.index is equalto 14 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				{% if loop.index is equalto 15 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				
+			{% endfor %}
+			{% endif %}
+		
+			{% endwith %}
+        </table>
+		<table class="table table-striped" id="someid">
+            <tr>
+                <td class="text-danger"><strong>TOP LOSERS</strong></td>
+            </tr>
+			{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			{% if loop.index is equalto 16 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				{% if loop.index is equalto 17 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				{% if loop.index is equalto 18 %} 
+            <tr>
+                <td>{{message}}</td>
+				</tr>
+				{% endif %}
+				
+				
+				
+			{% endfor %}
+			{% endif %}
+		
+			{% endwith %}
+        </table>
+		<br>
+    </div>
+</div>
+    </div>
+	<div class="col-lg-6">
+	
+	<iframe width="550" height="345"
+src="https://www.youtube.com/embed/artMWTTrxrw">
+</iframe>
+	<br>
+	<br>
+	
+	<input type="button" value="SENSEX" class="button button5 onclick="pic1()"/> <input type="button" class="button button5" value="  NIFTY  "
+    onclick="pic2()"/>
+<script type = "text/javascript">
+        function pic1()
+        {
+            document.getElementById("img").src = "/tmp/img.png";
+        }
+        function pic2()
+        {
+            document.getElementById("img").src ="/tmp/img1.png";
+        } </script>
+
+
+<img src = "/tmp/img.png" id = "img" width="600" height="400"/> 
+	</div>
+
+    <div class="col-lg-3">
+<table id="someid">
+<form method=post action="/">
+            <tr>
+                <td class="text-primary"><strong>RUPEE CURRENCY CONVERTER</strong>
+				<hr>
+			</td>
+            </tr>
+			
+            <tr><td><p><b>Enter Amount:</b> <input type="text" class="form-control" placeholder="Rupees" name="rupees" value=""></p>
+			<br></td></tr>
+				
+            <tr>
+                <td>
+				<dl>
+				<p><b>Select Currency</b></p>
+<select name="currency" value="currency">
+        <option value="US Dollar" name="IT">US Dollar</option>
+        <option value="British Pound">British Pound</option>
+		<option value="Euro">Euro</option>
+		<option value="Australian Dollar">Australian Dollar</option> 
+		<option value="Japanese Yen">Japanese Yen</option> 
+    </select>				
+				
+			</dl>
+			<br>
+		 </td>
+				</tr>
+				
+            <tr>
+                <td> <p><input type="submit" class="btn btn-info" value="Calculate" name="submit"></p></td>
+				</tr>
+				 <tr>
+          
+			{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			
+                {% if loop.index is equalto 20 %} 
+           
+                <td><b>{{message}}</b></td>
+				
+				{% endif %}
+			{% endfor %}
+			{% endif %}
+		
+			{% endwith %}
+			</tr>
+				
+            
+				</form>
+				
+        </table>    
+		</div>
+  </div>
+</div>
+
+
+<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</body>
+</form>
+</body>
+
+{% endblock %}
+
+{% endblock %}

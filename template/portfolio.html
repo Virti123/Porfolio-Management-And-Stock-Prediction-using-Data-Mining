@@ -1,0 +1,238 @@
+{% block head %}
+<head>
+<meta charset='utf-8'>
+<title>Trader's View</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+
+{% block body %}
+
+<body>
+
+
+<body>
+<div class="text-center">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <ul class="nav navbar-nav">
+      {% if session.logged_in %}
+      <li><a href="/logout/">Logout</a></li>
+	  {% else %}
+	  <li ><a href="/register/">Sign In</a></li>
+      <li><a href="/login/">Login</a></li>
+	  {% endif %}
+  </div>
+  </nav>
+<h1>Trader's View</h1>
+<form method=post action="/">
+<div class="btn-group">
+<input type="submit" class="btn btn-info" value="Home" name="submit">
+<input type="submit" class="btn btn-info" value="News" name="submit">
+<input type="submit" class="btn btn-info" value="My Portfolio" name="submit">
+<input type="submit" class="btn btn-info" value="Commodities" name="submit">
+<input type="submit" class="btn btn-info" value="Prediction" name="submit">
+<input type="submit" class="btn btn-info" value="Recommendation" name="submit">
+<input type="submit" class="btn btn-info" value="About Us" name="submit">
+<input type="submit" class="btn btn-info" value="FAQ's" name="submit">
+<input type="submit" class="btn btn-info" value="Contact Us" name="submit">
+
+</div>
+</form>
+<table class="table table-striped">
+<thead>
+        <tr>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			{% if loop.index is equalto 1 %} 
+            <th><center>Sensex<br>{{message}}</center></th>
+			{% endif %}
+			
+			{% if loop.index is equalto 2 %} 
+            <th><center>Nifty<br>{{message}}</center></th>
+			{% endif %}
+			{% if loop.index is equalto 3 %} 
+            <th><center>Euro<br>{{message}}</center></th>
+			{% endif %}
+			{% if loop.index is equalto 4 %} 
+			<th><center>Oil<br>{{message}}</center></th>
+			{% endif %}
+			{% if loop.index is equalto 5%} 
+            <th><center>Dollar-Rupee<br>{{message}}</center></th>
+			{% endif %}
+			{% endfor %}
+			{% endif %}
+		
+			{% endwith %}
+        </tr>
+    </thead>
+</table>
+
+
+
+
+{% if session.logged_in %}
+
+<form method=post action="/firstpage/">
+<div class="btn-group">
+<input type="submit" class="btn btn-info" value="My Stocks" name="submit">
+
+<input type="submit" class="btn btn-info" value="Add Stock" name="submit">
+<input type="submit" class="btn btn-info" value="Sell Stock" name="submit">
+<input type="submit" class="btn btn-info" value="Threshold" name="submit">
+<input type="submit" class="btn btn-info" value="Wish List" name="submit">
+
+
+</div>
+</form>
+
+<table class="table table-striped" id="someid">
+<div class="container">
+<center>
+  <table width="500" border=" 1px solid black" align="center">
+  
+      <tr>
+        <td height="45"><p align="center"><strong>Threshold Results</strong></p></td>
+      </tr>
+   
+    
+      <tr>
+	  {% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			{% if loop.index is not equalto 1%}
+			{% if loop.index is not equalto 2%}
+			{% if loop.index is not equalto 3%} 
+			{% if loop.index is not equalto 4%} 
+			{% if loop.index is not equalto 5%} 
+			{% if loop.index is not equalto 6%} 
+			{% if loop.index is not equalto 7%} 
+			{% if loop.index is not equalto 8%} 
+			{% if loop.index is not equalto 9%} 
+			{% if loop.index is not equalto 10%} 
+			{% if loop.index is not equalto 11%} 
+			{% if loop.index is not equalto 12%} 
+			{% if loop.index is not equalto 13%} 
+			{% if loop.index is not equalto 14%} 
+			{% if loop.index is not equalto 15%} 
+			{% if loop.index is not equalto 16%} 
+			{% if loop.index is not equalto 17%} 
+			{% if loop.index is not equalto 18%} 
+			{% if loop.index is not equalto 19%} 
+			{% if loop.index is not equalto 20%} 
+			{% if loop.index is not equalto 21%} 
+      <td height="45"><p align="center">
+       {{message}}
+	   </p>
+     </td>
+	 <tr></tr>
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	 {% endif %}
+	  {% endif %}
+	   {% endif %}
+	    {% endif %}
+		 {% endif %}
+		  {% endif %} 
+		  {% endif %}
+		   {% endif %}
+		    {% endif %}
+			 {% endif %}
+			  {% endif %}
+			   {% endif %}
+			    {% endif %}
+				 {% endif %}
+				 {% endif %}
+				 {% endif %}
+		  
+	 
+     
+      
+
+			{% endfor %}
+			{% endif %}
+		
+			{% endwith %}
+		
+       
+      </tr>
+      
+  </table>
+  </center>
+<table class="table table-striped" id="someid">
+<div class="container">
+<center>
+  <table width="800" border=" 1px solid black" align="center">
+  
+      <tr>
+        <td height="100"><p align="center"><strong>NET WORTH<strong></p></td>
+		<td height="100"><p align="center"><strong>Overall Gain/loss<strong></p></td>
+      </tr>
+   
+    
+      <tr>
+	  {% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			{% if loop.index is equalto 20%} 
+      <td height="100"><p align="center">
+       {{message}}
+	   </p>
+     </td>
+	 {% endif %}
+	 {% if loop.index is equalto 21%} 
+      <td height="100"><p align="center">
+       {{message}}
+	   </p>
+     </td>
+	 {% endif %}
+
+     
+      
+
+			{% endfor %}
+			{% endif %}
+		
+			{% endwith %}
+		
+       
+      </tr>
+      
+  </table>
+  </center>
+  {% else %}
+	<div class="container">
+	<br>
+	<h4>Please Login:</h4>
+	<br>
+	<form action="/login/" class="form-inline" method="post">
+		<input type="text" class="form-control" placeholder="username" name="username" value="{{request.form.username}}">
+
+		<input type="password" class="form-control" placeholder="Password" name="password" value="{{request.form.password}}">
+
+		<input class="btn btn-default" type="submit" value="Login">
+
+
+	</form>
+</div>
+
+{% endif %}
+  </div>
+<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+
+
+{% endblock %}
+{% endblock %}

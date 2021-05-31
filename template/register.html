@@ -1,0 +1,72 @@
+{% block head %}
+<head>
+<meta charset='utf-8'>
+<title>Trader's View</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+{% block body %}
+
+<body>
+<div class="text-center">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <ul class="nav navbar-nav">
+      {% if session.logged_in %}
+      <li><a href="/logout/">Logout</a></li>
+	  {% else %}
+	  <li ><a href="/register/">Sign In</a></li>
+      <li><a href="/login/">Login</a></li>
+	  {% endif %}
+  </div>
+  </nav>
+<h1>Trader's View</h1>
+<form method=post action="/">
+<div class="btn-group">
+<input type="submit" class="btn btn-info" value="Home" name="submit">
+<input type="submit" class="btn btn-info" value="News" name="submit">
+<input type="submit" class="btn btn-info" value="My Portfolio" name="submit">
+<input type="submit" class="btn btn-info" value="Commodities" name="submit">
+<input type="submit" class="btn btn-info" value="Prediction" name="submit">
+<input type="submit" class="btn btn-info" value="Recommendation" name="submit">
+<input type="submit" class="btn btn-info" value="About Us" name="submit">
+<input type="submit" class="btn btn-info" value="FAQ's" name="submit">
+<input type="submit" class="btn btn-info" value="Contact Us" name="submit">
+
+</div>
+</form>
+
+</body>
+
+	<div class = "container">
+		<h4>Register</h4>
+		<br>
+
+		{% from "_formhelpers.html" import render_field %}
+		<form method=post action="/register/">
+			<dl>
+				{{render_field(form.username)}}
+				{{render_field(form.email)}}
+				{{render_field(form.password)}}
+				{{render_field(form.confirm)}}
+				{{render_field(form.accept_tos)}}
+			</dl>
+			<input class="btn btn-default" type="submit" value=Register>
+		</form>
+		
+		{% if error %}
+			<p class="error"><strong>Error:</strong>{{error}}</p>
+		{% endif %}
+
+
+	</div>
+<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	</body>
+
+{% endblock %}
+{% endblock %}

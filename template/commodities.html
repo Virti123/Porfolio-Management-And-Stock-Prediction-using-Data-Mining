@@ -1,0 +1,134 @@
+{% block head %}
+<head>
+<meta charset='utf-8'>
+<title>Trader's View</title>
+<meta  content="5" name='description' content='Trader's View'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+{% block body %}
+
+<body>
+<div class="text-center">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <ul class="nav navbar-nav">
+      <li ><a href="#">Sign In</a></li>
+      <li><a href="#">Login</a></li>
+  </div>
+  </nav>
+<h1>Trader's View</h1>
+<form method=post action="/">
+<div class="btn-group">
+<input type="submit" class="btn btn-info" value="Home" name="submit">
+<input type="submit" class="btn btn-info" value="News" name="submit">
+<input type="submit" class="btn btn-info" value="My Portfolio" name="submit">
+<input type="submit" class="btn btn-info" value="Commodities" name="submit">
+<input type="submit" class="btn btn-info" value="Prediction" name="submit">
+<input type="submit" class="btn btn-info" value="Recommendation" name="submit">
+<input type="submit" class="btn btn-info" value="About Us" name="submit">
+<input type="submit" class="btn btn-info" value="FAQ's" name="submit">
+<input type="submit" class="btn btn-info" value="Contact Us" name="submit">
+
+</div>
+
+
+
+<h2><center>Commodities</center></h2>
+<table class="table table-striped">
+
+	
+			
+      
+
+			
+    <thead>
+		<tr>
+		<th><h3><center>Commodity</center></h3></th>
+		<th><h3><center>Price</center></h3></th>
+		</tr>
+        <tr>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			
+			{% if loop.index is equalto 20 %} 
+            <th><center>Gold</center></th>
+			<th><center>{{message}}</center></th>
+			{% endif %}
+			</tr>
+			<tr>
+			{% if loop.index is equalto 21 %} 
+            <th><center>Silver</center></th>
+			<th><center>{{message}}</center></th>
+			{% endif %}
+			</tr>
+			<tr>
+			{% if loop.index is equalto 22 %} 
+            <th><center>Crude Oil</center></th>
+			<th><center>{{message}}</center></th>
+			{% endif %}
+			</tr>
+			<tr>
+			{% if loop.index is equalto 23 %} 
+            <th><center>Natural Gas</center></th>
+			<th><center>{{message}}</center></th>
+			{% endif %}
+			</tr>
+			<tr>
+			{% if loop.index is equalto 24 %} 
+            <th><center>Copper</center></th>
+			<th><center>{{message}}</center></th>
+			{% endif %}
+			</tr>
+			<tr>
+			{% if loop.index is equalto 25 %} 
+            <th><center>Aluminium</center></th>
+			<th><center>{{message}}</center></th>
+			{% endif %}
+			</tr>
+			<tr>
+			{% if loop.index is equalto 26 %} 
+            <th><center>Nickel</center></th>
+			<th><center>{{message}}</center></th>
+			{% endif %}
+			</tr>
+			<tr>
+			{% if loop.index is equalto 27 %} 
+            <th><center>Lead</center></th>
+			<th><center>{{message}}</center></th>
+			{% endif %}
+			</tr>
+			<tr>
+			{% if loop.index is equalto 28 %} 
+            <th><center>Zinc</center></th>
+			<th><center>{{message}}</center></th>
+			{% endif %}
+			</tr>
+			<tr>
+			{% if loop.index is equalto 29 %} 
+            <th><center>Cotton</center></th>
+			<th><center>{{message}}</center></th>
+			{% endif %}
+			</tr>
+			{% endfor %}
+			{% endif %}
+			{% endwith %}
+        </tr>
+    </thead>
+</table>
+
+
+<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</body>
+</form>
+</body>
+
+{% endblock %}
+
+{% endblock %}

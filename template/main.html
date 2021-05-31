@@ -1,0 +1,43 @@
+{% block header %}
+<head>
+<style type="text/css"> 
+
+        #myMarquee {
+	 opacity: 0.2;
+    filter: alpha(opacity=20);
+            -webkit-marquee-width: 5000px;
+            -webkit-marquee-direction: down;
+            -webkit-marquee-increment: 1px;
+            -webkit-marquee-repetition: infinite;
+            -webkit-marquee-speed: normal;
+         -webkit-marquee-style: scroll;
+		 left:0px;
+z-index:-1;
+position:absolute;
+	
+        }
+	.imgB2 { left: 350px; 
+		top: 80px;
+		position:absolute;
+	} 
+		
+</style>
+  <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+{% block body %}
+
+<div class="container" id="myMarquee"><marquee direction="up">
+<img src="p1.jpg" width="1350px" height="495px"><img src="p4.jpg" width="1350px" height="495px"> 
+</marquee>
+</div>
+<div class="container id="imgB2">
+<p align="center" class="imgB2"><img src="o1.jpg" width="700" height="450" name="slide" /></p></div>
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,107 @@
+{% block head %}
+<head>
+<meta charset='utf-8'>
+<title>Trader's View</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+{% block body %}
+<body>
+
+<div class="text-center">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <ul class="nav navbar-nav">
+	{% if session.logged_in %}
+      <li><a href="/logout/">Logout</a></li>
+	  {% else %}
+	  <li ><a href="/register/">Sign In</a></li>
+      <li><a href="/login/">Login</a></li>
+	  {% endif %}
+  </div>
+  </nav>
+<h1>Trader's View</h1>
+<form method=post action="/">
+<div class="btn-group">
+<input type="submit" class="btn btn-info" value="Home" name="submit">
+<input type="submit" class="btn btn-info" value="News" name="submit">
+<input type="submit" class="btn btn-info" value="My Portfolio" name="submit">
+<input type="submit" class="btn btn-info" value="Commodities" name="submit">
+<input type="submit" class="btn btn-info" value="Prediction" name="submit">
+<input type="submit" class="btn btn-info" value="Recommendation" name="submit">
+<input type="submit" class="btn btn-info" value="About Us" name="submit">
+<input type="submit" class="btn btn-info" value="FAQ's" name="submit">
+<input type="submit" class="btn btn-info" value="Contact Us" name="submit">
+</div>
+</form>
+
+
+	<div class = "container">
+		<h2>Prediction</h2>
+		<h4 class="text-primary">According to STOCK </h4>
+		<br>
+		{% from "_formhelpers.html" import render_field %}
+		<form method=post action="/prediction/">
+			<dl>
+<select name="stockname" value="stockname">
+        <option value="Infosys" name="Infosys">Infosys</option>
+        <option value="Ashok Leyland">Ashok Leyland</option>  
+		<option value="Bajaj Auto">Bajaj Auto</option>
+		<option value="Hero Motorcorp">Hero Motorcorp</option> 
+		<option value="Mahindra & Mahindra">Mahindra & Mahindra</option> 
+		<option value="Maruti Suzuki">Maruti Suzuki</option> 
+		<option value="Tata Motors">Tata Motors</option> 
+		<option value="TCS">TCS</option> 
+		<option value="TVS Motor">TVS Motor</option> 
+		<option value="Axis Bank">Axis Bank</option>
+		<option value="Bank Of India">Bank Of India</option>
+		<option value="HDFC Bank">HDFC Bank</option>
+		<option value="ICICI Bank">ICICI Bank</option>
+		<option value="IndusInd Bank">IndusInd Bank</option>
+		<option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+		<option value="Punjab National Bank">Punjab National Bank</option>
+		<option value="Yes Bank">Yes Bank</option>
+		<option value="HCL Tech">HCL Tech</option>
+		<option value="Tech Mahindra">Tech Mahindra</option>
+		<option value="Wipro">Wipro</option>
+		<option value="TCS">TCS</option>
+		<option value="Lupin">Lupin</option>
+		<option value="Dr Reddys Labs">Dr Reddys Labs</option>
+		<option value="Sun Pharma">Sun Pharma</option>
+		<option value="Cipla">Cipla</option>
+    </select>				
+				
+			</dl>
+			<p><input type=submit value=submit></p>
+		</form>
+		
+		{% if error %}
+			<p class="error"><strong>Error:</strong>{{error}}</p>
+		{% endif %}
+		<br>
+		<br>
+				<h4 class="text-primary">According to SECTOR </h4>
+
+		<form method=post action="/sectors/">
+			<dl>
+<select name="sector" value="sector">
+        <option value="IT" name="IT">IT</option>
+        <option value="Automobile">Automobile</option>
+		<option value="Bank">Bank</option>
+		<option value="Pharmaceuticals">Pharmaceuticals</option> 
+    </select>				
+				
+			</dl>
+			<p><input type=submit value=submit></p>
+		</form>
+
+
+	</div>
+
+	</body>
+
+
+{% endblock %}
+{% endblock %}

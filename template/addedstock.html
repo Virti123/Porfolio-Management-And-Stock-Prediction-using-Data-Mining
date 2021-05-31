@@ -1,0 +1,106 @@
+{% block header %}
+<head>
+  <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+{% block body %}
+<div class="text-center">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <ul class="nav navbar-nav">
+	{% if session.logged_in %}
+      <li><a href="/logout/">Logout</a></li>
+	  {% else %}
+	  <li ><a href="/register/">Sign In</a></li>
+      <li><a href="/login/">Login</a></li>
+	  {% endif %}
+  </div>
+  </nav>
+<h1>Trader's View</h1>
+<form method=post action="/">
+<div class="btn-group">
+<input type="submit" class="btn btn-info" value="Home" name="submit">
+<input type="submit" class="btn btn-info" value="News" name="submit">
+<input type="submit" class="btn btn-info" value="My Portfolio" name="submit">
+<input type="submit" class="btn btn-info" value="Commodities" name="submit">
+<input type="submit" class="btn btn-info" value="Prediction" name="submit">
+<input type="submit" class="btn btn-info" value="Recommendation" name="submit">
+<input type="submit" class="btn btn-info" value="About Us" name="submit">
+<input type="submit" class="btn btn-info" value="FAQ's" name="submit">
+<input type="submit" class="btn btn-info" value="Contact Us" name="submit">
+</div>
+</form>
+
+
+<form method=post action="/firstpage/">
+<div class="btn-group">
+<input type="submit" class="btn btn-info" value="My Stocks" name="submit">
+<input type="submit" class="btn btn-info" value="Add Stock" name="submit">
+<input type="submit" class="btn btn-info" value="Sell Stock" name="submit">
+<input type="submit" class="btn btn-info" value="Threshold" name="submit">
+<input type="submit" class="btn btn-info" value="Wish List" name="submit">
+
+
+</div>
+</form>
+
+
+
+<div class="container">
+  <h2>Added Stock</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Stockname</th>
+        <th>Quantity</th>
+        <th>Date</th>
+        <th>Investment Price</th>
+		<th>Current Price</th>
+		<th>Gain/loss</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+      {% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+      <td>
+       {{message}}
+     </td>
+
+      {% if loop.index is divisibleby 6 %}
+      <tr></tr>
+      {% endif %}
+			
+      
+
+			{% endfor %}
+			{% endif %}
+		
+			{% endwith %}
+		
+       
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+
+
+{% endblock %}
+{% endblock %}

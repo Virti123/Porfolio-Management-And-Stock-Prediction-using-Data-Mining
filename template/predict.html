@@ -1,0 +1,27 @@
+{% block body %}
+
+<body>
+	<div class = "container">
+		<h4>Future Prediction</h4>
+		<br>
+		{% from "_formhelpers.html" import render_field %}
+		<form method=post action="/predict/">
+			<dl>
+				{{render_field(form.stockname)}}
+				
+				
+			</dl>
+			<p><input type=submit value=Predict Future></p>
+		</form>
+		
+		{% if error %}
+			<p class="error"><strong>Error:</strong>{{error}}</p>
+		{% endif %}
+
+
+	</div>
+</body>
+
+
+
+{% endblock %}

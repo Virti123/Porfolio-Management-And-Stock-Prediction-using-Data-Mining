@@ -1,0 +1,245 @@
+ {% block header %}
+<head>
+<title>Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+{% block body %}
+<div class="text-center">
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<ul class="nav navbar-nav">
+<li ><a href="/register/">Sign In</a></li>
+<li><a href="/login/">Login</a></li>
+</div>
+</nav>
+<h1>Trader's View</h1>
+<form method=post action="/">
+<div class="btn-group">
+<input type="submit" class="btn btn-info" value="Home" name="submit">
+<input type="submit" class="btn btn-info" value="News" name="submit">
+<input type="submit" class="btn btn-info" value="My Portfolio" name="submit">
+<input type="submit" class="btn btn-info" value="Commodities" name="submit">
+<input type="submit" class="btn btn-info" value="Prediction" name="submit">
+<input type="submit" class="btn btn-info" value="Recommendation" name="submit">
+<input type="submit" class="btn btn-info" value="About Us" name="submit">
+<input type="submit" class="btn btn-info" value="FAQ's" name="submit">
+<input type="submit" class="btn btn-info" value="Contact Us" name="submit">
+</div>
+<div class="container">
+<h2>Stock News</h2>
+<table class="table">
+<thead><th>
+<table class="table">
+<thead>
+<tr>
+<th>Business News</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href = "http://www.moneycontrol.com/news/world-news/china-march-home-prices-rise-at-fastest-ratetwo-years_6292321.html"><p>China March home prices rise at fastest rate in two years	</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://www.moneycontrol.com/news/economy/onion-output-to-hit-record-high203-lakh-tonnes2015-16_6291601.html"><p>Onion output to hit record high of 203 lakh tonnes in 2015-16	</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://www.moneycontrol.com/news/world-news/japan-quake-rattles-mkts-as-firms-shut-survivors-queue-for-food_6292221.html"><p>Japan quake rattles mkts as firms shut; survivors queue for food	</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://www.moneycontrol.com/news/economy/iran-can-be-reliable-partner-for-indias-energy-needs-rouhani_6291121.html"><p>Iran can be reliable partner for India&#39;s energy needs: Rouhani	</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://www.moneycontrol.com/news/wire-news/ecuador-quake-toll-rises-to-246-dead2527-injured_6290941.html"><p>Ecuador quake toll rises to 246 dead and 2,527 injured	</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://www.moneycontrol.com/news/economy/india-attaches-highest-priority-to-tieschina-parrikar_6292281.html"><p>India attaches highest priority to ties with China: Parrikar	</p></a>
+</td>
+
+<tr></tr>
+</tr>
+</tbody>
+</table>
+</th>
+<th>
+<table class="table">
+<thead>
+<tr><th>Recommendations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/recos/buy-cadila-healthcare-with-a-target-at-rs-335-siddarth-bhamre/articleshow/51872994.cms"><p>Sell Ashok Leyland with a target at Rs 103: Siddarth Bhamre</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/recos/sell-marico-with-a-target-at-rs-240-mitesh-thacker/articleshow/51872974.cms"><p>Buy Cadila Healthcare with a target at Rs 335: Siddarth Bhamre</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/recos/buy-or-sell-ideas-from-experts-for-monday-18-april-2016/articleshow/51872136.cms"><p>Buy Godrej Consumer Products with a target at Rs 1,420: Mitesh Thacker</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/recos/buy-pidilite-industries-with-a-target-of-rs-638-sameet-chavan/articleshow/51808237.cms"><p>Sell Marico with a target at Rs 240: Mitesh Thacker</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/recos/buy-bata-india-with-a-target-of-rs-575-sumeet-bagadia/articleshow/51808216.cms"><p>Buy Ambuja Cement with a target at Rs 240: Mitesh Thacker</p></a>
+</td>
+
+<tr></tr>
+</tr>
+</tbody>
+</table>
+</th>
+<tr><th>
+<table class="table">
+<thead>
+<tr><th>Announcements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/announcements/adani-ports-raises-rs-500-crore-via-debentures/articleshow/51599668.cms"><p>Adani Ports raises Rs 500 crore via debentures</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/announcements/adani-ports-raises-rs-500-crore-via-debentures/articleshow/51599668.cms"><p>Colgate Palmolive declares interim dividend of Rs 3 per share</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/announcements/colgate-palmolive-declares-interim-dividend-of-rs-3-per-share/articleshow/51584618.cms"><p>Titan declares interim dividend of Rs 2 per share</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/announcements/colgate-palmolive-declares-interim-dividend-of-rs-3-per-share/articleshow/51584618.cms"><p>Hero MotoCorp declares interim dividend of Rs 40 per share</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/announcements/titan-declares-interim-dividend-of-rs-2-per-share/articleshow/51426953.cms"><p>Marico declares 3rd interim dividend of Rs 1 per equity share</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/announcements/titan-declares-interim-dividend-of-rs-2-per-share/articleshow/51426953.cms"><p>Jyothy Lab declares interim dividend of Rs 4 per share</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/announcements/hero-motocorp-declares-interim-dividend-of-rs-40-per-share/articleshow/51341658.cms"><p>Dr Reddy's board approves share buyback for Rs 1,569.4 crore</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/announcements/hero-motocorp-declares-interim-dividend-of-rs-40-per-share/articleshow/51341658.cms"><p>Bank of India gets Board nod to raise up to Rs 10,000 crore</p></a>
+</td>
+
+<tr></tr>
+</tr>
+</tbody>
+</table>
+</th><th>
+<table class="table">
+<thead>
+<tr><th>Earnings</th>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/earnings/tcs-earnings-five-things-to-watch-out-from-fourth-quarter-results/articleshow/51869015.cms"><p>TCS earnings: Five things to watch out from fourth-quarter results</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/earnings/tcs-earnings-five-things-to-watch-out-from-fourth-quarter-results/articleshow/51869015.cms"><p>TCS Q4 net profit seen up by 2.67% QoQ to Rs 6,273 crore; 6 factors to watch out for</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/earnings/tcs-q4-net-profit-seen-up-by-2-67-qoq-to-rs-6273-crore-6-factors-to-watch-out-for/articleshow/51853012.cms"><p>DCB Bank's Q4 net profit increases by 10% to Rs 70 crore</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/earnings/tcs-q4-net-profit-seen-up-by-2-67-qoq-to-rs-6273-crore-6-factors-to-watch-out-for/articleshow/51853012.cms"><p>Corporate earnings to rise by 25% in FY17: Report</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/earnings/dcb-banks-q4-net-profit-increases-by-10-to-rs-70-crore/articleshow/51844549.cms"><p>Corporate earnings to rise by 25% in FY17: Report</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/earnings/dcb-banks-q4-net-profit-increases-by-10-to-rs-70-crore/articleshow/51844549.cms"><p>DCB Bank Q4 net climbs 10.5% to Rs 70 crore</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/earnings/corporate-earnings-to-rise-by-25-in-fy17-report/articleshow/51842278.cms"><p>Infosys Q4 results: Upbeat guidance foretells better times ahead</p></a>
+</td>
+
+<tr></tr>
+
+<td>
+<a href = "http://economictimes.indiatimes.com/markets/stocks/earnings/corporate-earnings-to-rise-by-25-in-fy17-report/articleshow/51842278.cms"><p>Infosys Q4 results: Ten key takeaways</p></a>
+</td>
+
+<tr></tr>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+</table></div>
+</body>
+</html>
+{% endblock %}
+{% endblock %}

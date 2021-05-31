@@ -1,0 +1,120 @@
+{% block head %}
+<head>
+
+<meta charset='utf-8'>
+<title>Trader's View</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+{% block body %}
+<body>
+<div class="text-center">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <ul class="nav navbar-nav">
+      {% if session.logged_in %}
+      <li><a href="/logout/">Logout</a></li>
+	  {% else %}
+	  <li ><a href="/register/">Sign In</a></li>
+      <li><a href="/login/">Login</a></li>
+	  {% endif %}
+  </div>
+  </nav>
+<h1>Trader's View</h1>
+<form method=post action="/">
+<div class="btn-group">
+<input type="submit" class="btn btn-info" value="Home" name="submit">
+<input type="submit" class="btn btn-info" value="News" name="submit">
+<input type="submit" class="btn btn-info" value="My Portfolio" name="submit">
+<input type="submit" class="btn btn-info" value="Commodities" name="submit">
+<input type="submit" class="btn btn-info" value="Prediction" name="submit">
+<input type="submit" class="btn btn-info" value="Recommendation" name="submit">
+<input type="submit" class="btn btn-info" value="About Us" name="submit">
+<input type="submit" class="btn btn-info" value="FAQ's" name="submit">
+<input type="submit" class="btn btn-info" value="Contact Us" name="submit">
+
+</div>
+</form>
+
+<form method=post action="/firstpage/">
+<div class="btn-group">
+<input type="submit" class="btn btn-info" value="My Stocks" name="submit">
+
+<input type="submit" class="btn btn-info" value="Add Stock" name="submit">
+<input type="submit" class="btn btn-info" value="Sell Stock" name="submit">
+<input type="submit" class="btn btn-info" value="Threshold" name="submit">
+<input type="submit" class="btn btn-info" value="Wish List" name="submit">
+
+
+</div>
+</form>
+
+
+
+
+
+<div class="container">
+	<br>
+	<h4>Enter Threshold</h4>
+	<br>
+	<form action="" class="form-inline" method="post">
+		<input type="text" class="form-control" placeholder="Stockname" name="stockname" >
+
+		<input type="text" class="form-control" placeholder="Mininmum" name="minimum" >
+		<input type="text" class="form-control" placeholder="Maximum" name="maximum">
+
+		<input class="btn btn-default" type="submit" name="submit" value="Add">
+
+
+	</form>
+</div>
+
+
+<div class="container">
+  <h2>Added Stock</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Stockname</th>
+        <th>Mininmum Threshold</th>
+        <th>Maximum Threshold</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+      {% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+      <td>
+       {{message}}
+     </td>
+
+      {% if loop.index is divisibleby 3%}
+      <tr></tr>
+      {% endif %}
+			
+      
+
+			{% endfor %}
+			{% endif %}
+		
+			{% endwith %}
+		
+       
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</body>
+{% endblock %}
+{% endblock %}
