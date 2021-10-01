@@ -25,7 +25,7 @@ PATH: http://localhost/(projectFolderName)/template/main.html
 **WEKA (Waikato Environment for knowledge Analysis)**
 * Weka is a popular suite of machine learning software written in java, developed by
 University of Waikato, New Zealand. 
-*Weka is a free software available under GNU General Public License.
+* Weka is a free software available under GNU General Public License.
 
 **phpMyAdmin:**
 
@@ -35,5 +35,12 @@ PATH: http://localhost/phpmyadmin/
 ```
 * In MySQL database, create a database and then create a table as directed in the manual.
 
-![Alt text](img.png?raw=true "Title")
+### ER Diagram
+![Alt text](ER.png?raw=true "Title")
+
+### Class Diagram
+![Alt text](ClassDiagram.png?raw=true "Title")
+
+### First Page
+![Alt text](First.png?raw=true "Title")
 
