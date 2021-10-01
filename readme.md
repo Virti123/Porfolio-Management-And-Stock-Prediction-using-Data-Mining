@@ -7,7 +7,7 @@ There are several factors which affect the price of a stock. Some of them are da
 * Programming Languages: Python, HTML, CSS, PHP
 * Tools: phpMyAdmin, MySQL Database, Wamp Server
 
-### Prerequisites
+# Prerequisites
 This project assumes a Unix-like environment. You may need to modify some instructions below (and perhaps also modify some scripts) for it to work on Windows.
 
 **Install the required python 3 packages** if you don't already have them:
@@ -35,12 +35,12 @@ PATH: http://localhost/phpmyadmin/
 ```
 * In MySQL database, create a database and then create a table as directed in the manual.
 
-### ER Diagram
+# ER Diagram
 ![Alt text](/Images/ER.png?raw=true "Title")
 
-### Class Diagram
+# Class Diagram
 ![Alt text](/Images/ClassDiagram.png?raw=true "Title")
 
-### First Page
+# First Page
 ![Alt text](/Images/First.png?raw=true "Title")
 
