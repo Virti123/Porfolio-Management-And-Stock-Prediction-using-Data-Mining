@@ -22,6 +22,10 @@ $ pip install -r requirements.txt
 ```
 PATH: http://localhost/(projectFolderName)/template/main.html
 ```
+**WEKA (Waikato Environment for knowledge Analysis)**
+* Weka is a popular suite of machine learning software written in java, developed by
+University of Waikato, New Zealand. 
+*Weka is a free software available under GNU General Public License.
 
 **phpMyAdmin:**
 
