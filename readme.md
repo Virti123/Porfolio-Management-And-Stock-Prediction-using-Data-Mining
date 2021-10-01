@@ -1,11 +1,6 @@
-# Porfolio-Management-Stock-Prediction-and-Recommendation-using-Data-Mining
+#  Porfolio-Management-Stock-Prediction-and-Recommendation-using-Data-Mining
+
 There are several factors which affect the price of a stock. Some of them are daily news articles, volume of that stock traded, sentiment in the market, profit of the company etc. Due to the advancement in technology a large amount of data about the stocks is generated every day in the form of news articles, analyst reviews, twitter data etc. The increasing amount of data is making it increasingly difficult to manually analyse the data to make strategic decisions.  We implemented and compared the results of three classification algorithms (1) Naïve Bayes (2) Random Forest.
-
-Requirements
-
-# Project Title
-
-Simple overview of use/purpose.
 
 ## Description
 
@@ -13,10 +8,11 @@ An in-depth paragraph about your project and overview of use.
 
 ## Getting Started
 
-### Dependencies
+### Prerequisites
+This project assumes a Unix-like environment. You may need to modify some instructions below (and perhaps also modify some scripts) for it to work on Windows.
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+Install the required python 3 packages if you don't already have them:
+
 
 ### Installing
 
