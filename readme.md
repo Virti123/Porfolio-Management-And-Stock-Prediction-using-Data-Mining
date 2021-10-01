@@ -35,3 +35,5 @@ PATH: http://localhost/phpmyadmin/
 ```
 * In MySQL database, create a database and then create a table as directed in the manual.
 
+![Alt text](img.png?raw=true "Title")
+
