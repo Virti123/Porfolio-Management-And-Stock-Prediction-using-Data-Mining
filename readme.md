@@ -36,11 +36,11 @@ PATH: http://localhost/phpmyadmin/
 * In MySQL database, create a database and then create a table as directed in the manual.
 
 ### ER Diagram
-![Alt text](ER.png?raw=true "Title")
+![Alt text](/Images/ER.png?raw=true "Title")
 
 ### Class Diagram
-![Alt text](ClassDiagram.png?raw=true "Title")
+![Alt text](/Images/ClassDiagram.png?raw=true "Title")
 
 ### First Page
-![Alt text](First.png?raw=true "Title")
+![Alt text](/Images/First.png?raw=true "Title")
 
